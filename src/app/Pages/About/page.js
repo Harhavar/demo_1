@@ -71,7 +71,7 @@ const About = () => {
           <Heading color={"#00A3CF"} fontSize={"30px"} alignItems={"center"}
             textAlign={"center"}
             fontFamily={"sans-serif"}>
-            WELCOME TO vardhan_speech_therapy
+            WELCOME TO VARDHAN SPEECH THERAPY
           </Heading>
           <Heading color={"#004861"} fontWeight={"700"} fontSize={"25px"} my={10} alignItems={"center"}
             textAlign={"center"}
@@ -80,10 +80,9 @@ const About = () => {
           </Heading>
           <Text color={"#333"} fontWeight={"300"} fontSize={"17px"} my={10} fontFamily={"sans-serif"}>
             We are a community of licensed multidisciplinary professionals.
-            Established in 2019 and we have conducted more than 1000 online
-            sessions and home visits within a span of 2 years. We are associated
+            Established in 2023 We are associated
             with professionals with following languages ( Kannada, English,
-            Malayalam, Hindi, Tamil, Marathi, and Other Regional Languages)
+             Hindi )
           </Text>
           <Heading color={"#004861"} fontWeight={"700"} fontSize={"45px"} alignItems={"center"}
             textAlign={"center"}
@@ -116,7 +115,7 @@ const About = () => {
             fontFamily={"sans-serif"}
           >
             The word health refers to a state of complete emotional and physical
-            well-<br></br>being. Healthcare exists to help people maintain this
+            well being. Healthcare exists to help people maintain this
             optimal state of health.
           </Text>
         </Box>

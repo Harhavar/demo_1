@@ -94,7 +94,7 @@ const HeaderLogo = () => {
       </Box>
       <Box>
         <Flex gap={8} justify={{ base: "center", md: "flex-end" }} my={2} mx={{ base: 2, md: 10 }}>
-          <Link href="http://www.google.com" target="_blank">
+          <Link href="https://www.google.com/search?q=vardhan+speech+therapy+clinic&oq=vardhan&gs_lcrp=EgZjaHJvbWUqBggCECMYJzIGCAAQRRg5MgcIARAuGIAEMgYIAhAjGCcyDQgDEC4YrwEYxwEYgAQyBwgEEC4YgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQkxMDQ1NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">
             <FaGoogle color="white" />
           </Link>
           <Link href="https://www.linkedin.com/company/97418395" target="_blank">
@@ -103,7 +103,7 @@ const HeaderLogo = () => {
           <Link href="https://twitter.com/" target="_blank">
             <FaTwitter color="white" />
           </Link>
-          <Link href="https://www.facebook.com/search/" target="_blank">
+          <Link href="https://www.facebook.com/share/CfqUHB7ThQDJLfb6/?mibextid=qi2Omg" target="_blank">
             <FaFacebookF color="white" />
           </Link>
           <Link href="https://wa.me/+919741871457" target="_blank">

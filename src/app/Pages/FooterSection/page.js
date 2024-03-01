@@ -54,7 +54,7 @@ const FooterSection = () => {
                     _hover={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)" }}
                   >
                     <Link
-                      href="https://www.facebook.com/"
+                      href="https://www.facebook.com/share/CfqUHB7ThQDJLfb6/?mibextid=qi2Omg"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -178,7 +178,7 @@ const FooterSection = () => {
               <Text fontFamily="Poppins, sans-serif" mt="20">
                 Email:{" "}
                 <Link
-                  href="speechtherapy@gmail.com"
+                  href="vardhanslp@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
