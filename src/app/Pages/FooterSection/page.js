@@ -182,10 +182,10 @@ const FooterSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  info@speechvst.com
+                  vardhanslp@gmail.com
                 </Link>
               </Text>
-              <Text fontFamily="Poppins, sans-serif" mt="20">
+              <Text fontFamily="Poppins, sans-serif" >
                 Phone:{" "}
                 <Link
                   href="tel:9741871457"
