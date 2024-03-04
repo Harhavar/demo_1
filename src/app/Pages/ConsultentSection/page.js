@@ -1,4 +1,4 @@
-// "use client";
+ "use client";
 
 
 import {
@@ -12,8 +12,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 
 const ConsultentSection = () => {
+  const router = useRouter();
   return (
     <Box
       backgroundColor={"#FFFFFF"}
@@ -47,6 +49,7 @@ const ConsultentSection = () => {
             padding={2}
             border={"none"}
             borderRadius={"15"}
+            onClick={() => router.push("/components/Appointment")}
             mt={{ base: 4, md: 6 }}
           >
             Book Now!{" "}
