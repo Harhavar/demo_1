@@ -177,8 +177,9 @@ import { Box, Button, FormControl, FormLabel, Heading, Image, Input, Text, Texta
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { format } from 'date-fns';
-
+import { useRouter } from "next/navigation";
 const Appointment = () => {
+  const router = useRouter();
   const formattedDateTime = new Date().toISOString(); // Format date to ISO 8601
   const [formData, setFormData] = useState({
     appId: uuidv4(),
@@ -240,15 +241,16 @@ const Appointment = () => {
         </Box>
         <Box
           display={"flex"}
-          flexDirection={"row"}
+          flexDirection={"column"}
           justifyContent={"space-evenly"}
         >
-          <Box p={20}>
+          <Box p={20} display={"flex"}
+            flexDirection={"column"}>
             <Heading
               color={"#004861"}
               fontWeight={"700"}
               fontSize={"45px"}
-              textAlign={"right"}
+              textAlign={"center"}
             >
               Make Your Appointment{" "}
             </Heading>
@@ -256,62 +258,68 @@ const Appointment = () => {
               color={"#333"}
               fontWeight={"300"}
               fontSize={"17px"}
-              mt={"20"}
+              mt={"8"}
               alignItems={"center"}
-              textAlign={"right"}
+              textAlign={"center"}
             >
               Transform your communication skills. Make your appointment today
               and start your journey towards confident, effective communication.
               Dont wait!
             </Text>
           </Box>
-          <Box display={"flex"} flexDirection={"column"} gap={12} padding={30}>
+          <Box display={"flex"} flexDirection={"column"} gap={6} padding={30} pt={5}>
             <Input
               placeholder="Name"
-              height={"5vh"}
-              width={"40vw"}
+              height={"8vh"}
+              width={"70vw"}
               padding={5}
               value={formData.name}
               onChange={handleChange}
               name="name"
+              required
             />
             <Input
               placeholder="Email"
-              height={"5vh"}
-              width={"40vw"}
+              height={"8vh"}
+              width={"70vw"}
               padding={5}
               value={formData.email}
               onChange={handleChange}
               name="email"
+              required
             />
             <Input
+
               placeholder="Phone Number"
-              height={"5vh"}
-              width={"40vw"}
+              height={"8vh"}
+              width={"70vw"}
               padding={5}
               value={formData.phoneNumber}
               onChange={handleChange}
               name="phoneNumber"
+              required
             />
             <Input
               placeholder="Select Date and Time"
               size="md"
-              height={"5vh"}
-              width={"40vw"}
+              height={"8vh"}
+              width={"70vw"}
               padding={5}
               type="datetime-local"
               value={formData.appointmentDate}
               onChange={handleChange}
               name="appointmentDate"
+              required
             />
             <Textarea
-              placeholder="Note......"
+              placeholder="Please enter your information"
               height={"10vh"}
-              width={"40vw"}
+              width={"70vw"}
               padding={5}
               value={formData.note}
               onChange={handleChange}
               name="note"
+              required
             />
             <Button
               bg="#0E8EAB"
@@ -324,6 +332,17 @@ const Appointment = () => {
               onClick={handleSubmit}
             >
               Submit
+            </Button>
+            <Button
+              bg="#0E8EAB"
+              color={"white"}
+              borderRadius={5}
+              cursor={"pointer"}
+              p={"8px"}
+              border={"none"}
+              onClick={() => router.push("/")}
+            >
+              back
             </Button>
           </Box>
         </Box>
