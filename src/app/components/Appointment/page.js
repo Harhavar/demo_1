@@ -178,6 +178,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { format } from 'date-fns';
 import { useRouter } from "next/navigation";
+import { toast } from 'react-hot-toast';
 const Appointment = () => {
   const router = useRouter();
   const formattedDateTime = new Date().toISOString(); // Format date to ISO 8601
@@ -221,6 +222,9 @@ const Appointment = () => {
         updatedDate: new Date().toISOString(), // Format date to ISO 8601
         appointmentDate: "",
       });
+      if(response.data === "new appointment"){
+        toast.success('Appointment Created'); // Displays a success message
+      }
       setSubmitSuccess(true);
     } catch (error) {
       console.error("Form submission error:", error);

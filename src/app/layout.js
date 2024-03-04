@@ -1,4 +1,8 @@
 
+import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "vardhanorg",
@@ -8,6 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Toaster position="top-right" />
       <body >{children}</body>
     </html>
   );
