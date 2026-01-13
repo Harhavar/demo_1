@@ -16,23 +16,20 @@ const About = () => {
   const fakeImages = [
     {
       url: "Voice_Therapy.jpg",
-      text: "Transform your voice with specialized therapy, enhancing clarity, strength, and expression for more effective communication and confidence.",
-      link: "/page1",
       heading: "Voice Therapy",
+      text: "Professional voice therapy services to treat hoarseness, vocal strain, voice loss, and voice modulation issues, helping children and adults achieve clear and healthy voice production."
     },
-
     {
       url: "Speech_Therpy.jpg",
-      text: "Unlock your full potential with personalized speech therapy services, improving communication skills and boosting confidence!",
-      link: "/page1",
       heading: "Speech Therapy",
+      text: "Comprehensive speech therapy for children and adults addressing speech delay, articulation disorders, stammering, pronunciation difficulties, and communication challenges."
     },
     {
       url: "stock.jpg",
-      text: "Regain independence and mobility post-stroke with personalized rehabilitation programs, restoring function and improving quality of life.",
-      link: "/page1",
-      heading: "Stroke rehabilitation",
-    },
+      heading: "Stroke Rehabilitation",
+      text: "Specialized speech and rehabilitation therapy for stroke and neurological conditions, focusing on speech recovery, swallowing therapy, and cognitive communication skills."
+    }
+    ,
   ];
 
   const [scrollIndex, setScrollIndex] = useState(0);
@@ -47,7 +44,7 @@ const About = () => {
     return () => clearInterval(intervalId);
   },);
   return (
-    <Box display={"flex"} flexDirection={"column"} pt={15}>
+    <Box id="about" display={"flex"} flexDirection={"column"} pt={15}>
       <Box
         display="flex"
         justifyContent="space-between"
@@ -78,85 +75,77 @@ const About = () => {
             fontFamily={"sans-serif"}>
             About Us
           </Heading>
-          <Text color={"#333"} fontWeight={"300"} fontSize={"17px"} my={10} fontFamily={"sans-serif"}>
-            We are a community of licensed multidisciplinary professionals.
-            Established in 2023 We are associated
-            with professionals with following languages ( Kannada, English,
-             Hindi )
+          <Text
+            color="#333"
+            fontWeight="400"
+            fontSize="17px"
+            my={6}
+            fontFamily="sans-serif"
+          >
+            Vardhan Speech Therapy is a professional speech and language therapy clinic
+            dedicated to providing high-quality, evidence-based therapy services for
+            children and adults. Established in 2023, our center is supported by licensed
+            and experienced speech-language pathologists and multidisciplinary
+            rehabilitation professionals.
           </Text>
+
+          <Text
+            color="#333"
+            fontWeight="400"
+            fontSize="17px"
+            my={4}
+            fontFamily="sans-serif"
+          >
+            We specialize in the assessment and treatment of speech delay, language
+            disorders, articulation and pronunciation difficulties, stammering,
+            voice disorders, neurological speech conditions, autism spectrum disorders,
+            ADHD, and developmental communication challenges.
+          </Text>
+
+          <Text
+            color="#333"
+            fontWeight="400"
+            fontSize="17px"
+            my={4}
+            fontFamily="sans-serif"
+          >
+            Our therapists provide services in Kannada, English,Hindi,Tamil and Telugu, ensuring
+            effective communication and culturally sensitive care for every individual.
+          </Text>
+
           <Heading color={"#004861"} fontWeight={"700"} fontSize={"45px"} alignItems={"center"}
             textAlign={"center"}
             fontFamily={"sans-serif"}>
             Mission
           </Heading>
-          <Text color={"#333"} fontWeight={"300"} fontSize={"17px"} my={10} fontFamily={"sans-serif"}>
-            Our mission is to fulfill the aspirations of patients in need to
-            find their specific therapists or pathologists for both Children and
-            adults. Our motive is to deliver excellent rehabilitation services
-            at your doorstep, sparing no expense, to ensure that the individual
-            steps out with a rejuvenated spirit.
+          <Text
+            color="#333"
+            fontWeight="400"
+            fontSize="17px"
+            my={6}
+            fontFamily="sans-serif"
+          >
+            Our mission is to empower children and adults with communication challenges
+            by delivering personalized, ethical, and evidence-based speech and language
+            therapy services. We strive to help every individual achieve confident
+            communication, independence, and improved quality of life.
           </Text>
+
+          <Text
+            color="#333"
+            fontWeight="400"
+            fontSize="17px"
+            my={4}
+            fontFamily="sans-serif"
+          >
+            We are committed to providing comprehensive rehabilitation services through
+            clinic-based and home-based therapy programs, ensuring accessibility,
+            consistency, and measurable outcomes for our clients.
+          </Text>
+
         </Box>
       </Box>
-      <Center>
-        <Box display={"flex"} flexDirection={"column"}>
-          <Heading color={"#004861"} fontWeight={"700"} fontSize={"45px"} alignItems={"center"}
-            textAlign={"center"}
-            fontFamily={"sans-serif"}>
-            Child Development Center
-          </Heading>
-          <Text
-            color={"#333"}
-            fontWeight={"300"}
-            fontSize={"17px"}
-            mt={"10"}
-            alignItems={"center"}
-            textAlign={"center"}
-            fontFamily={"sans-serif"}
-          >
-            The word health refers to a state of complete emotional and physical
-            well being. Healthcare exists to help people maintain this
-            optimal state of health.
-          </Text>
-        </Box>
-      </Center>
-
-      <Center>
-        <Box display={"flex"} my={10} border={""}>
-          <Flex flexDirection={{ base: "column", md: "row" }}>
-            {fakeImages.map((item, index) => (
-              <Card
-                key={index}
-                m={4}
-                w={{ base: "100%", md: "300px" }} // Responsive width
-                boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
-                display={"flex"}
-                bg={"#FFFFFF"}
-              >
-                <CardBody>
-                  <Image
-                    src={item.url}
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                    width="100%"
-                    height={"40vh"}
-                  />
-                  <Center>
-                    <Stack mt="6" spacing="3" >
-                      <Heading size="md" color={"#00A3C8"} align="center">
-                        {item.heading}
-                      </Heading>
-                      <Text color={"#333"} textAlign="center">
-                        {item.text}
-                      </Text>
-                    </Stack>
-                  </Center>
-                </CardBody>
-              </Card>
-            ))}
-          </Flex>
-        </Box>
-      </Center>
+      
     </Box>
   );
 };

@@ -6,6 +6,8 @@ import FooterSection from "@/app/Pages/FooterSection/page";
 import GallerySection from "@/app/Pages/GallerySection/page";
 import HeaderLogo from "@/app/Pages/HeaderLogo/page";
 import HeroSection from "@/app/Pages/HeroSection/page";
+import Services from "@/app/Pages/Services/Page";
+import Contcat from "@/app/Pages/Contcat/page"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const HomeSection = () => {
@@ -14,10 +16,12 @@ const HomeSection = () => {
       <HeaderLogo />
       <HeroSection />
       <AboutSection />
+      <Services />
       <GallerySection />
       <Appoinment />
       <ConsultentSection />
       <BetterHelathCare />
+      <Contcat />
       <FooterSection />
     </>
   );

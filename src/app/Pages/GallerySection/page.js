@@ -11,10 +11,24 @@ const GallerySection = () => {
     "6g.jpg",
     "7g.jpg",
     "8g.jpg",
+    "9g.png",
+    
+    "11g.png",
+    "12Caregivertraining.png",
+    "13child-rasing-hand-deafness-hearing-loss.png",
+    "14Fluency shaping  stuttering  cluttering  voice therapy.png",
+    "15Oral placement therapy.png",
+    "16g.jpg",
+    "17g.jpg",
+    "18g.jpg",
+    "19playbased therapy.png",
+    "20g.png",
+   
+    "22swallowing therapy.png",
   ];
 
   return (
-    <Box>
+    <Box id="gallery">
       <Flex justifyContent="center">
         <Box>
           <Text
@@ -47,7 +61,7 @@ const GallerySection = () => {
             <Box>
               <Image
                 src={"/" + img}
-                alt="gallery-image"
+                alt="Speech therapy images"
                 width={290}
                 height={200}
                 objectFit="cover"

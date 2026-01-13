@@ -24,7 +24,7 @@ const HeaderLogo = () => {
         width="100%"
         bg={"white"}
         zIndex={9999}
-        position={{base:"none", md:"fixed"}}
+        position={{ base: "none", md: "fixed" }}
         top={0}
         left={0}
         margin={0}
@@ -32,143 +32,155 @@ const HeaderLogo = () => {
         display={"flex"}
         flexDirection={"column"}
       >
-        {/* <Flex
+
+        <Flex
           bg="#00A3C8"
           color="white"
-          flexDirection={"row"}
-          alignItems={"center"}
-          textAlign={"center"}
-          fontFamily={"sans-serif"}
-          justifyContent={"space-between"}
+          align="center"
+          justify="space-between"
+          px={{ base: 4, md: 10 }}
+          py={2}
+          fontSize="sm"
         >
-          <Box my={2}>
-            <Flex gap={4} justify="center" flexDirection={"row"} mx={10}>
-              <Text>( +91) 9741871457</Text>
-              <Text>vardhanslp@gmail.com</Text>
-            </Flex>
-          </Box>
-          <Box>
-            <Flex gap={8} justify="center" my={2} mx={10}>
-              <Link href="http://www.google.com" target="_blank">
-                <FaGoogle color="white" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/97418395"
-                target="_blank"
-              >
-                <FaLinkedin color="white" />
-              </Link>
-              <Link href="https://twitter.com/" target="_blank">
-                <FaTwitter color="white" />
-              </Link>
-              <Link href="https://www.facebook.com/search/" target="_blank">
-                <FaFacebookF color="white" />
-              </Link>
-              <Link href="https://wa.me/+919741871457" target="_blank">
-                <FaWhatsapp color="white" />
-              </Link>
-              <Link
-                href="https://instagram.com/vardhan_speech_therapy?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-                target="_blank"
-              >
-                <FaInstagram color="white" />
-              </Link>
-            </Flex>
-          </Box>
-        </Flex> */}
-        <Flex
-      bg="#00A3C8"
-      color="white"
-      flexDirection={{ base: "column", md: "row" }}
-      alignItems="center"
-      textAlign="center"
-      fontFamily="sans-serif"
-      justifyContent="space-between"
-      p={2}
-    >
-      <Box mb={{ base: 4, md: 0 }}>
-        <Flex gap={4} justify="center" flexDirection={{ base: "column", md: "row" }} mx={{ base: 2, md: 10 }}>
-          <Text>( +91) 9741871457</Text>
-          <Text>vardhanslp@gmail.com</Text>
-        </Flex>
-      </Box>
-      <Box>
-        <Flex gap={8} justify={{ base: "center", md: "flex-end" }} my={2} mx={{ base: 2, md: 10 }}>
-          <Link href="https://www.google.com/search?q=vardhan+speech+therapy+clinic&oq=vardhan&gs_lcrp=EgZjaHJvbWUqBggCECMYJzIGCAAQRRg5MgcIARAuGIAEMgYIAhAjGCcyDQgDEC4YrwEYxwEYgAQyBwgEEC4YgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQkxMDQ1NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">
-            <FaGoogle color="white" />
-          </Link>
-          <Link href="https://www.linkedin.com/company/97418395" target="_blank">
-            <FaLinkedin color="white" />
-          </Link>
-          <Link href="https://twitter.com/" target="_blank">
-            <FaTwitter color="white" />
-          </Link>
-          <Link href="https://www.facebook.com/share/CfqUHB7ThQDJLfb6/?mibextid=qi2Omg" target="_blank">
-            <FaFacebookF color="white" />
-          </Link>
-          <Link href="https://wa.me/+919741871457" target="_blank">
-            <FaWhatsapp color="white" />
-          </Link>
-          <Link href="https://instagram.com/vardhan_speech_therapy?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank">
-            <FaInstagram color="white" />
-          </Link>
-        </Flex>
-      </Box>
-    </Flex>
+          {/* Contact */}
+          <Flex gap={6} align="center" _hover={{ transform: "scale(1.1)", color: "#335555" }}
+            transition="0.2s">
+            <Link href="tel:+919741871457">
+              <Flex align="center" gap={2}>
+                <FaPhone />
+                <Text href="tel:+919741871457" >(+91) 97418 71457</Text>
+              </Flex>
+            </Link>
 
-        <Box
-        mx={5} // Adjust this value as needed
-        px={{ base: "15px", md: "0" }}
-        position="relative"
-        bg="#fff"
-      >
-        <Flex
-          py="3"
-          justifyContent={{ base: "space-between", md: "space-around" }}
-          alignItems="center"
-          direction={{ base: "column", md: "row" }}
-        >
-          <Box mb={{ base: 4, md: 0 }} order={{ base: 2, md: 1 }}>
-            <Link href="/">
-              <Image src="/vlogo.png" alt="Logo" width={200} height={50} />
+            <Link href="mailto:vardhanslp@gmail.com">
+              <Flex align="center" gap={2}>
+                <MdOutlineEmail />
+                <Text >vardhanslp@gmail.com</Text>
+              </Flex>
             </Link>
-          </Box>
-          <Box
-            display={{ base: "none", md: "flex" }}
-            gap={4}
-            fontSize="15.5px"
-            fontWeight="bold"
-            color="#666"
-            py={7}
-            order={{ base: 1, md: 2 }}
-          >
-            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
-              Home
+          </Flex>
+
+          {/* Social */}
+          <Flex gap={4} _hover={{ transform: "scale(1.1)", color: "#E6F7FB" }}
+            transition="0.2s">
+            <Link href="https://www.google.com/search?q=vardhan+speech+therapy+clinic" target="_blank" aria-label="Google Reviews">
+              <FaGoogle />
             </Link>
-            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
-              About
+            <Link href="https://www.linkedin.com/company/97418395" target="_blank" aria-label="LinkedIn">
+              <FaLinkedin />
             </Link>
-            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
-              Services
+            <Link href="https://wa.me/919741871457" target="_blank" aria-label="WhatsApp">
+              <FaWhatsapp />
             </Link>
-            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
-              Contact
+            <Link href="https://instagram.com/vardhan_speech_therapy" target="_blank" aria-label="Instagram">
+              <FaInstagram />
             </Link>
-            <Button
-              bg="#0E8EAB"
-              color={"white"}
-              mt={"-7px"}
-              borderRadius={5}
-              cursor={"pointer"}
-              p={"8px"}
-              border={"none"}
-              onClick={() => router.push("/components/Appointment")}
-            >
-              Make an Appointment
-            </Button>
-          </Box>
+          </Flex>
         </Flex>
-      </Box>
+        <Box
+          mx={5} // Adjust this value as needed
+          px={{ base: "10px", md: "0" }}
+          position="relative"
+          bg="##e0afaf"
+        >
+          <Flex
+
+            justifyContent={{ base: "space-between", md: "space-around" }}
+            alignItems="center"
+            direction={{ base: "column", md: "row" }}
+            _hover={{ transform: "scale(1.1)", color: "#E6F7FB" }}
+            transition="0.2s"
+          >
+            <Box bg="white">
+              <Flex justify="center" align="center">
+                <Link href="/" aria-label="Vardhan Speech Therapy Home">
+                  <Image
+                    src="/vst-logo.png"
+                    alt="Vardhan Speech Therapy Clinic Logo"
+                    width={100}
+                    height={100}
+                    priority
+                  />
+                </Link>
+              </Flex>
+            </Box>
+
+            <Box
+              as="nav"
+              display={{ base: "none", md: "flex" }}
+              alignItems="center"
+              gap={8}
+              fontSize="15px"
+              fontWeight="600"
+              color="gray.700"
+            >
+              <Link href="/" passHref>
+                <Text
+                  cursor="pointer"
+                  _hover={{ color: "#0E8EAB" }}
+                  transition="0.2s"
+                >
+                  Home
+                </Text>
+              </Link>
+
+              <Link href="/#about" scroll={true}>
+                <Text
+                  cursor="pointer"
+                  _hover={{ color: "#0E8EAB" }}
+                  transition="0.2s"
+                >
+                  About
+                </Text>
+              </Link>
+
+
+              <Link href="/#services" passHref>
+                <Text
+                  cursor="pointer"
+                  _hover={{ color: "#0E8EAB" }}
+                  transition="0.2s"
+                >
+                  Services
+                </Text>
+              </Link>
+
+              <Link href="/#gallery" passHref>
+                <Text
+                  cursor="pointer"
+                  _hover={{ color: "#0E8EAB" }}
+                  transition="0.2s"
+                >
+                  Gallery
+                </Text>
+              </Link>
+
+              <Link href="/#contact" passHref>
+                <Text
+                  cursor="pointer"
+                  _hover={{ color: "#0E8EAB" }}
+                  transition="0.2s"
+                >
+                  Contact
+                </Text>
+              </Link>
+
+              <Button
+                bg="#0E8EAB"
+                color="white"
+                borderRadius="full"
+                px={6}
+                py={5}
+                fontSize="14px"
+                _hover={{ bg: "#0B6F86" }}
+                onClick={() => router.push("/appointment")}
+              >
+                Make an Appointment
+              </Button>
+            </Box>
+
+          </Flex>
+        </Box>
       </Box>
     </>
   );
